@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::get('/usercount',[AuthController::class,'countUsers']); 
     Route::get('/totalplays',[GameController::class,'index']); 
     Route::get('/most_played_game',[GameController::class,'mostPlayedGame']); 
-    Route::get('/most_played_category',[GameController::class,' mostPlayedCategory']); 
+    Route::get('/most_played_category',[GameController::class,'mostPlayedCategory']); 
     Route::get('/games_played',[GameController::class,'countUniqueGames']); 
 
     Route::post('/played_games_with_date',[GameController::class,'countUniqueGamesWithDate']); 
