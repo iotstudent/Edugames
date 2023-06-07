@@ -172,11 +172,8 @@ class AuthController extends Controller
     {
         
         $Users = User::where('role', 'user');
-
         $userCount = $Users->count();
-      
-        $response = [ 'Number of Users' => $userCount ];
-
+        $response = ['Number of Users'=>$userCount];
         return response ($response, 200);
     }
 
